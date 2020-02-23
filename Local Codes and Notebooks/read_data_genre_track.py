@@ -35,7 +35,6 @@ for k in  range(len(tgen)):
     else:
         tgen[k]=[]
 tracks['genres']=tgen
-    
 
 ## Match the tracks to the genre data: Create dictionary with genre label as key
 genre_dict = {}
@@ -48,3 +47,9 @@ for i in range(len(tgen)):
                     genre_dict[k]+=[ti]
                 else:
                     genre_dict.update({k:[ti]})
+
+
+## Total number of samples for the different root genres
+for i in genre_id_root:
+    print(i,len(genre_dict[i]))
+    
